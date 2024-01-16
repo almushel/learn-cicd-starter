@@ -19,7 +19,7 @@ func TestGetAPIKey(t *testing.T) {
 		headers map[string]string
 		want    string
 	}{
-		{"Empty header", map[string]string{}, "1"},
+		{"Empty header", map[string]string{}, ""},
 		{"Malformed authorization", map[string]string{"Authorization": apiKey}, ""},
 		{"Valid authorization", map[string]string{"Authorization": "ApiKey " + apiKey}, apiKey},
 	}
